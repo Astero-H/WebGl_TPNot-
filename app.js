@@ -269,6 +269,7 @@ resetSettings.onclick = function () {
     for (i = 0; i < sliderButtons.length; i++) {
         sliderButtons[i].value = 0;
     }
+    holdZoom.value = 24;
     renderScene();
     drawElems();
 };
