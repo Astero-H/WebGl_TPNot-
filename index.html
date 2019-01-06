@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="main();">
+    <canvas id="webgl-canvas" width=800 height=600>
+        Utilisez un navigateur compatible avec WebGL
+    </canvas>
+
+    
+    <div class="slidecontainer">
+        <h3>SETTINGS</h3>
+        <div id = "rotSliders">
+            <h4>  Rotation </h4>
+            <div class="rotation">x<input type="range" min="-10" max="10" value="0" class="slider" id="rotationX"></div>
+            <div class="rotation">y<input type="range" min="-10" max="10" value="0" class="slider" id="rotationY"></div>
+            <div class="rotation">z<input type="range" min="-10" max="10" value="0" class="slider" id="rotationZ"></div>       
+        </div>
+        
+        <div id = "camSliders">
+            <h4> Camera </h4>
+            <div class="camera"><label>zoom</label> <input type="range" min="0" max="90" value="45" class="slider" id="zoom"></div>
+            <div class="camera"><label>perspective</label><input type="range" min="-10" max="10" value="0" class="slider" id="perspective"></div>
+        </div>
+
+        <div id = "transSliders">
+            <h4> Translation </h4>
+            <div class="translation"><label>x</label> <input type="range" min="-10" max="10" value="0" class="slider" id="translationX"></div>
+            <div class="translation"><label>y</label> <input type="range" min="-10" max="10" value="0" class="slider" id="translationY"></div>
+            <div class="translation"><label>z</label> <input type="range" min="-10" max="10" value="0" class="slider" id="translationZ"></div>
+        </div>
+
+        <button type="button" id="resetSettings">Reset</button>
+       
+    </div>
+
+
+    <script src="gl-matrix-min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
