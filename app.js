@@ -195,6 +195,7 @@ function renderScene() {
     mat4.lookAt(viewMatrix, [perspective, perspective, 10], [0,0,0], [0, 1, 0]);
     mat4.perspective(projMatrix, zoom * Math.PI / 180, gl.canvas.clientWidth / gl.canvas.clientHeight, 0.1, 1000);
 
+    console.log(zoom);
     gl.uniformMatrix4fv(matWorldUniformLocation, gl.FALSE, worldMatrix);
     gl.uniformMatrix4fv(matViewUniformLocation, gl.FALSE, viewMatrix);
     gl.uniformMatrix4fv(matProjdUniformLocation, gl.FALSE, projMatrix);
@@ -208,7 +209,7 @@ function renderScene() {
     //translation   
     var translationMatrix = mat4.create();
     var translation = vec3.create();
-    vec3.set(translation, holdTranslationx.value, holdTranslationy.value, holdTranslationz.value);
+    vec3.set(translation, holdTranslationx.value/2, holdTranslationy.value/2.5, holdTranslationz.value/2);
     //console.log(holdTranslationx.value);
     mat4.translate(translationMatrix, translationMatrix, translation);
 
@@ -270,6 +271,8 @@ resetSettings.onclick = function () {
         sliderButtons[i].value = 0;
     }
     holdZoom.value = 24;
+
+
     renderScene();
     drawElems();
 };
