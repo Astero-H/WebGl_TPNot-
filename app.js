@@ -127,8 +127,8 @@ function initShaders() {
     vertexShader = gl.createShader(gl.VERTEX_SHADER);
     fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
 
-    var vertexShaderText = loadText('vertexShader.glsl');
-    var fragmentShaderText = loadText('fragmentShader.glsl');
+    var vertexShaderText = loadText('https://astero-h.github.io/WebGl_renduTP/vertexShader.glsl');
+    var fragmentShaderText = loadText('https://astero-h.github.io/WebGl_renduTP/fragmentShader.glsl');
 
     gl.shaderSource(vertexShader, vertexShaderText);
     gl.shaderSource(fragmentShader, fragmentShaderText);
