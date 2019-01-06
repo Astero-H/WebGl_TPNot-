@@ -192,7 +192,7 @@ function renderScene() {
     var perspective = holdPerspective.value;
     
     mat4.identity(worldMatrix);
-    mat4.lookAt(viewMatrix, [perspective, perspective, 10], [0,0,0], [0, 1, 0]);
+    mat4.lookAt(viewMatrix, [perspective, perspective, 30], [0,0,0], [0, 1, 0]);
     mat4.perspective(projMatrix, zoom * Math.PI / 180, gl.canvas.clientWidth / gl.canvas.clientHeight, 0.1, 1000);
 
     console.log(zoom);
